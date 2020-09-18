@@ -1,0 +1,13 @@
+{
+	"compilerOptions": {
+		"baseUrl": "./src",
+		"paths": {
+			"#components": ["components"],
+			"#data": ["data"],
+			"#routes": ["routes"],
+			"#utils": ["utils"],
+			"#store": ["store"]
+		}
+	},
+	"exclude": ["node_modules"]
+}
