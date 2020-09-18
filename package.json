@@ -1,25 +1,41 @@
 {
-  "name": "labs-frontend-challenge",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
-    "react-scripts": "2.1.3"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+	"name": "labs-frontend-challenge",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"fuse.js": "^6.4.1",
+		"node-sass": "^4.14.1",
+		"react": "^16.8.1",
+		"react-dom": "^16.8.1",
+		"react-router-dom": "^5.2.0",
+		"react-scripts": "2.1.3",
+		"recoil": "0.0.13"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"postinstall": "link-module-alias",
+		"preinstall": "command -v link-module-alias && link-module-alias clean || true"
+	},
+	"_moduleAliases": {
+		"#components": "src/components",
+		"#data": "src/data",
+		"#routes": "src/routes",
+		"#utils": "src/utils",
+		"#store": "src/store"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not ie <= 11",
+		"not op_mini all"
+	],
+	"devDependencies": {
+		"link-module-alias": "^1.2.0"
+	}
 }
