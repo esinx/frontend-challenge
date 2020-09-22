@@ -79,6 +79,6 @@
 
 @media (prefers-color-scheme: dark) {
 	.buttonWrapper {
-		background: linear-gradient(#33333300, var(--pcc-background) 30%);
+		background: linear-gradient(#33333300, var(--pcc-background) 30%) !important;
 	}
 }
