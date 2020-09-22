@@ -1,0 +1,84 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	.title {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.icon {
+			margin-right: 10px;
+			width: 20px;
+			height: 20px;
+		}
+	}
+	.badge {
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		font-size: 15px;
+		display: grid;
+		place-content: center;
+		background: var(--pcc-red);
+		color: white;
+	}
+}
+.empty {
+	color: var(--pcc-foreground-dark);
+	font-size: 15px;
+	padding: 30px;
+	text-align: center;
+}
+
+.courses {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 10px;
+}
+
+.warning {
+	color: var(--pcc-foreground-dark);
+	font-size: 15px;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.buttonWrapper {
+	position: sticky;
+	margin-top: 15px;
+	padding: 40px 0;
+	bottom: 0px;
+	background: linear-gradient(#ffffff00, #ffffffff 30%);
+}
+
+:not(.buttonWrapper) .button {
+	margin-top: 15px;
+}
+
+.button {
+	display: flex;
+	place-content: center;
+	background: #555;
+	border-radius: 5px;
+	color: white;
+	padding: 15px;
+	font-size: 15px;
+	line-height: 15px;
+	transition: all 0.3s;
+	background: var(--pcc-blue);
+
+	.icon {
+		line-height: 15px;
+		width: 15px;
+		height: 15px;
+		margin-right: 10px;
+	}
+	&.disabled {
+		opacity: 0.5;
+	}
+	&.enabled:hover {
+		cursor: pointer;
+		opacity: 0.75;
+		transform: scale(1.02);
+	}
+}

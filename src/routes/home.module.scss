@@ -1,0 +1,48 @@
+.root {
+	position: relative;
+	display: flex;
+	transition: all 0.3s;
+	align-items: flex-start;
+	.courseArea {
+		flex: 1;
+		.courses {
+			display: grid;
+			justify-content: center;
+			grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+			gap: 30px;
+		}
+	}
+	.cartArea {
+		position: -webkit-sticky;
+		position: sticky;
+		top: 20px;
+		flex: 0 0 250px;
+		margin-left: 30px;
+	}
+}
+
+.modalWrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	pointer-events: none;
+}
+
+.fabArea {
+	display: none;
+}
+
+// for smaller screens, we hide the cart and make it "togglable"
+@media only screen and (max-width: 1100px) {
+	.cartArea {
+		display: none;
+	}
+	.fabArea {
+		display: block;
+		position: fixed;
+		right: 30px;
+		bottom: 30px;
+	}
+}

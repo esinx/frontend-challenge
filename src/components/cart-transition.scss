@@ -1,0 +1,26 @@
+$transition-time: 500ms;
+
+.cart-transition-enter {
+	opacity: 0;
+	transform: scale(0);
+}
+.cart-transition-enter-active {
+	opacity: 1;
+	transform: scale(1);
+	transition: all $transition-time cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.cart-transition-exit {
+	opacity: 1;
+	transform: scale(1);
+	& > * {
+		display: none;
+	}
+	overflow: hidden;
+}
+.cart-transition-exit-active {
+	opacity: 0;
+	height: 0;
+	padding: 0;
+	margin: 0;
+	transition: all $transition-time;
+}

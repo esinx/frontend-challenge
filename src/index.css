@@ -1,14 +1,48 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+
+:root {
+	--pcc-blue: rgb(36, 127, 255);
+	--pcc-red: rgb(255, 67, 67);
+	--pcc-background: #fff;
+	--pcc-background-light: #fff;
+	--pcc-background-pill: #eee;
+	--pcc-foreground: #333;
+	--pcc-foreground-accent: #fff;
+	--pcc-foreground-dark: #555;
+	--pcc-foreground-pill: #333;
+	--pcc-border: #dedede;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+@media (prefers-color-scheme: dark) {
+	:root {
+		--pcc-blue: rgb(36, 127, 255);
+		--pcc-red: rgb(255, 67, 67);
+		--pcc-background: #333;
+		--pcc-background-light: #444;
+		--pcc-background-pill: #555;
+
+		--pcc-foreground: #fff;
+		--pcc-foreground-accent: #fff;
+		--pcc-foreground-dark: #ccc;
+		--pcc-foreground-pill: #fff;
+
+		--pcc-border: #555;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	/* a hackish solution to position: fixed (see components/Modal.js) */
+	width: 100vw;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+		"Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background: var(--pcc-background);
+	color: var(--pcc-foreground);
+}
+
+* {
+	box-sizing: border-box;
 }

@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import styles from "./nav.module.scss";
 
-export default () => (
-  <div style={{
-    width: '100%',
-    padding: '0 1rem',
-    borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
-  }}>
-    <h2>Penn Course Cart</h2>
-  </div>
-)
+export default () => {
+	return (
+		<div className={styles.nav}>
+			<div className={styles.content}>
+				<h2>Penn Course Cart</h2>
+			</div>
+		</div>
+	);
+};

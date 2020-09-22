@@ -1,0 +1,87 @@
+.filterBox {
+	display: block;
+	width: 100%;
+	margin: 30px auto;
+	padding: 20px;
+	font-size: 20px;
+	background: var(--pcc-background-light);
+	box-shadow: 0 10px 20px #33333333;
+	border-radius: 10px;
+	transition: all 0.3s;
+	&:focus-within {
+		box-shadow: 0 10px 20px #33333355;
+	}
+	.searchBox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		.icon {
+			flex: 0 0 20px;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			margin-right: 10px;
+		}
+		.search {
+			flex: 1;
+			outline: none;
+			border: none;
+			padding: 0;
+			font-size: 20px;
+			background: var(--pcc-background-light);
+			color: var(--pcc-foreground);
+		}
+	}
+	.sortBox {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 10px;
+		font-size: 15px;
+		.icon {
+			flex: 0 0 20px;
+			width: 20px;
+			height: 20px;
+			line-height: 20px;
+			margin-right: 10px;
+		}
+		.sortTags {
+			flex: 1;
+			.tag {
+				font-size: 12px;
+				display: inline-block;
+				background: var(--pcc-background-pill);
+				color: var(--pcc-foreground-pill);
+				padding: 5px;
+				border-radius: 3px;
+				margin: 3px;
+				transition: all 0.3s;
+				&:hover,
+				&.active {
+					cursor: pointer;
+					background: var(--pcc-blue);
+					color: var(--pcc-foreground-accent);
+				}
+			}
+		}
+	}
+	.ascendingBox {
+		margin-top: 10px;
+		.ascending {
+			font-size: 12px;
+			display: inline-block;
+			background: var(--pcc-background-pill);
+			color: var(--pcc-foreground-pill);
+			padding: 5px;
+			border-radius: 3px;
+			margin: 3px;
+			transition: all 0.3s;
+			&:hover,
+			&.active {
+				cursor: pointer;
+				background: var(--pcc-blue);
+				color: var(--pcc-foreground-accent);
+			}
+		}
+	}
+}

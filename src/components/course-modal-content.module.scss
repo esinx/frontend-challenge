@@ -1,0 +1,75 @@
+.courseModalContent {
+	font-size: 15px;
+	line-height: 1.5;
+	position: relative;
+	// min-height: 500px;
+	.dept_number {
+		color: var(--pcc-foreground-dark);
+		font-family: "Fira Mono", monospace;
+	}
+	.title {
+		font-size: 35px;
+		font-weight: 200;
+		line-height: 1.2;
+	}
+	.description {
+		margin-top: 10px;
+	}
+	.error {
+		margin-top: 10px;
+		text-align: center;
+	}
+	.skeletons {
+		margin-top: 10px;
+	}
+	.instructor {
+		display: inline-block;
+		background: var(--pcc-background-pill);
+		color: var(--pcc-foreground-pill);
+		padding: 3px 5px;
+		border-radius: 3px;
+		margin: 3px;
+	}
+
+	h3 {
+		margin: 5px 0;
+	}
+	ul {
+		margin: 5px 0;
+	}
+
+	.buttonWrapper {
+		position: sticky;
+		margin-top: 15px;
+		padding: 40px 0;
+		bottom: 0px;
+		background: linear-gradient(#00000000, var(--pcc-background) 30%);
+		.button {
+			display: flex;
+			place-content: center;
+			border-radius: 5px;
+			color: var(--pcc-foreground-accent);
+			padding: 15px;
+			transition: all 0.3s;
+			font-size: 15px;
+			line-height: 15px;
+			.icon {
+				line-height: 15px;
+				width: 15px;
+				height: 15px;
+				margin-right: 10px;
+			}
+			&.add {
+				background: var(--pcc-blue);
+			}
+			&.remove {
+				background: var(--pcc-red);
+			}
+			&:hover {
+				cursor: pointer;
+				opacity: 0.75;
+				transform: scale(1.02);
+			}
+		}
+	}
+}

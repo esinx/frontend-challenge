@@ -1,0 +1,68 @@
+.course {
+	padding: 20px;
+	font-size: 15px;
+	background: var(--pcc-background-light);
+	box-shadow: 0 10px 20px #33333333;
+	border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	transition: all 0.3s;
+	&:hover {
+		box-shadow: 0 10px 20px #33333355;
+	}
+	.info {
+		.number {
+			color: var(--pcc-foreground-dark);
+			font-family: "Fira Mono", monospace;
+		}
+		.title {
+			font-size: 18px;
+			font-weight: 700;
+		}
+	}
+	.prereqs {
+		margin-top: 5px;
+		flex: 1;
+		display: flex;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		.prereq {
+			font-size: 12px;
+			background: var(--pcc-background-pill);
+			color: var(--pcc-foreground-pill);
+			padding: 5px;
+			border-radius: 3px;
+			margin: 3px;
+		}
+	}
+	.button {
+		display: flex;
+		place-content: center;
+		background: #555;
+		border-radius: 5px;
+		color: white;
+		padding: 10px;
+		margin-top: 10px;
+		transition: all 0.3s;
+		font-size: 15px;
+		line-height: 15px;
+		.icon {
+			line-height: 15px;
+			width: 15px;
+			height: 15px;
+			margin-right: 10px;
+		}
+		&:hover {
+			cursor: pointer;
+			opacity: 0.75;
+			transform: scale(1.02);
+		}
+		&.add {
+			background: var(--pcc-blue);
+		}
+		&.remove {
+			background: var(--pcc-red);
+		}
+	}
+}

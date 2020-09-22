@@ -1,0 +1,33 @@
+.fab {
+	background: var(--pcc-blue);
+	padding: 20px;
+	border-radius: 50%;
+	box-shadow: 0px 3px 10px #33333377;
+	z-index: 1;
+	.icon {
+		color: white;
+		width: 20px;
+		height: 20px;
+		transition: all 0.3s;
+	}
+	.badge {
+		position: absolute;
+		top: 0;
+		right: 0;
+		transform: translate(25%, -25%);
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		font-size: 15px;
+		display: grid;
+		place-content: center;
+		background: var(--pcc-red);
+		color: white;
+	}
+	&:hover {
+		cursor: pointer;
+		.icon {
+			transform: scale(1.2);
+		}
+	}
+}

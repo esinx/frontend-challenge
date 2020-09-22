@@ -1,0 +1,24 @@
+$transition-time: 500ms;
+@mixin route-before-transition {
+	opacity: 0;
+	transform: translateY(100px);
+}
+@mixin route-after-transition {
+	opacity: 1;
+	transform: scale(1) translateY(0px);
+}
+
+.route-transition-enter {
+	@include route-before-transition;
+}
+.route-transition-enter-active {
+	@include route-after-transition;
+	transition: all $transition-time;
+}
+.route-transition-exit {
+	@include route-after-transition;
+}
+.route-transition-exit-active {
+	@include route-before-transition;
+	transition: all $transition-time;
+}

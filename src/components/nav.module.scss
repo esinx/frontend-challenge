@@ -1,0 +1,52 @@
+.nav {
+	background: var(--pcc-background-light);
+	border-bottom: solid #ccc 1px;
+	.content {
+		width: 100vw;
+		max-width: 1200px;
+		margin: auto;
+		padding: 20px;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		h2 {
+			margin: 0;
+		}
+		.cart {
+			position: relative;
+			transition: all 0.3s;
+			.icon {
+				width: 20px;
+				height: 20px;
+			}
+			.badge {
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				font-size: 12px;
+				font-family: "Fira Mono", monospace;
+
+				display: grid;
+				place-content: center;
+
+				background: var(--pcc-red);
+				color: white;
+				transform: translate(100%, -50%);
+			}
+			&:hover {
+				cursor: pointer;
+				opacity: 0.5;
+			}
+		}
+	}
+}
+@media (prefers-color-scheme: dark) {
+	.nav {
+		background: var(--pcc-background-light);
+		border-bottom: none;
+	}
+}

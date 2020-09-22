@@ -1,26 +1,32 @@
-import React, { Component } from 'react'
-import './App.css'
+import React from "react";
+import { Route, Switch, BrowserRouter as Router, useLocation } from "react-router-dom";
+import * as routes from "#routes";
 
-import Nav from './components/Nav'
-import Courses from './components/Courses'
-import Cart from './components/Cart'
+import Nav from "#components/Nav";
 
-class App extends Component {
-  render() {
-    return (
-      <>
-        <Nav />
-        <div style={{
-          width: '100%',
-          boxSizing: 'border-box',
-          padding: '0 calc(1rem + 10%)',
-        }}>
-          <Courses />
-          <Cart />
-        </div>
-      </>
-    );
-  }
-}
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+import "./route-transition.scss";
 
-export default App
+const Content = () => {
+	let location = useLocation();
+	console.log(location);
+	return (
+		<TransitionGroup>
+			<CSSTransition key={location.key} classNames="route-transition" timeout={500}>
+				<Switch location={location}>
+					<Route exact path="/" component={routes.Home} />
+					<Route exact path="/receipt" component={routes.Receipt} />
+				</Switch>
+			</CSSTransition>
+		</TransitionGroup>
+	);
+};
+
+export default () => {
+	return (
+		<Router>
+			<Nav />
+			<Content />
+		</Router>
+	);
+};

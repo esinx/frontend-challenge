@@ -1,0 +1,56 @@
+.course {
+	padding: 10px;
+	background: var(--pcc-background-light);
+	border: solid var(--pcc-border) 1px;
+	border-radius: 10px;
+	display: flex;
+	font-size: 10px;
+	align-items: center;
+	justify-content: space-between;
+	transition: all 0.3s;
+	&:hover {
+		background: var(--pcc-border);
+		cursor: pointer;
+	}
+	.info {
+		flex: 1;
+		.number {
+			color: var(--pcc-foreground-dark);
+			font-family: "Fira Mono", monospace;
+		}
+		.title {
+			font-size: 12px;
+			font-weight: 700;
+		}
+	}
+	.button {
+		width: 25px;
+		height: 25px;
+		display: grid;
+		place-content: center;
+		background: #555;
+		border-radius: 50%;
+		color: white;
+		transition: all 0.3s;
+		margin-left: 5px;
+		.icon {
+			width: 10px;
+			height: 10px;
+			// illusion
+			transform: translateX(-1px);
+		}
+		.text {
+			display: none;
+		}
+		&:hover {
+			cursor: pointer;
+			opacity: 0.75;
+		}
+		&.add {
+			background: var(--pcc-blue);
+		}
+		&.remove {
+			background: var(--pcc-red);
+		}
+	}
+}
