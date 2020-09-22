@@ -9,7 +9,6 @@ import "./route-transition.scss";
 
 const Content = () => {
 	let location = useLocation();
-	console.log(location);
 	return (
 		<TransitionGroup>
 			<CSSTransition key={location.key} classNames="route-transition" timeout={500}>
