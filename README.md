@@ -1,5 +1,7 @@
 # Penn Labs Frontend Challenge Submission for Fall 2020
 
+Live demo available at [https://penn-course-cart.esinx.net](https://penn-course-cart.esinx.net)
+
 ---
 
 ### Running This Project
