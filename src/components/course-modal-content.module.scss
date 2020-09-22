@@ -43,7 +43,8 @@
 		margin-top: 15px;
 		padding: 40px 0;
 		bottom: 0px;
-		background: linear-gradient(#00000000, var(--pcc-background) 30%);
+		// safari gradient workaround
+		background: linear-gradient(#ffffff00, var(--pcc-background) 30%);
 		.button {
 			display: flex;
 			place-content: center;
@@ -71,5 +72,13 @@
 				transform: scale(1.02);
 			}
 		}
+	}
+}
+
+// safari gradient workaround
+
+@media (prefers-color-scheme: dark) {
+	.buttonWrapper {
+		background: linear-gradient(#33333300, var(--pcc-background) 30%);
 	}
 }
