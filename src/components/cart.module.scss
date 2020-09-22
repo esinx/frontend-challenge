@@ -48,7 +48,7 @@
 	margin-top: 15px;
 	padding: 40px 0;
 	bottom: 0px;
-	background: linear-gradient(#ffffff00, #ffffffff 30%);
+	background: linear-gradient(#00000000, var(--pcc-background) 30%);
 }
 
 :not(.buttonWrapper) .button {
