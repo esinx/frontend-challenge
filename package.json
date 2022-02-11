@@ -4,7 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"fuse.js": "^6.4.1",
-		"node-sass": "^4.14.1",
+		"node-sass": "^7.0.0",
 		"react": "^16.8.1",
 		"react-dom": "^16.8.1",
 		"react-loading-skeleton": "^2.1.1",
